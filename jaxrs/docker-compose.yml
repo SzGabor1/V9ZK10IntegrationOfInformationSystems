@@ -1,0 +1,13 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: JAXRS
+    command: java -jar app.jar
+    ports:
+      - "8085:8080"
+    restart: always
+    environment:
+      - MONGO_URL=mongodb://uname:pw@ip:port

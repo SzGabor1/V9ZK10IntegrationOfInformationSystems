@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  react:
+    container_name: jaxrs-frontend
+    build: .
+    restart: always
+    ports:
+      - "4178:4173"
